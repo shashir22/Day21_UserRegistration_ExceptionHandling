@@ -13,6 +13,7 @@ namespace UserRegistrationException
         public static string REGEX_LASTNAME = "[A-Z]{1}[a-z]{2,}";
         public static string REGEX_EMAILID = "^[0-9a-zA-Z]+[.+-_]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}";
         public static string REGEX_MOBILENUMBER = "[0-9]{2}[ ]?[0-9]{10}$";
+        public static string REGEX_PASSWORD = "^.{8,}?";
         public bool ValidateFirstName(string firstName)
         {
             if (firstName == null)
@@ -45,6 +46,13 @@ namespace UserRegistrationException
             }
             return Regex.IsMatch(mobileNumber, REGEX_MOBILENUMBER);
         }
-
+        public bool ValidatePassword(string password)
+        {
+            if (password == null)
+            {
+                throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionsType.Invalid_MESSAGE, "Invalid Password");
+            }
+            return Regex.IsMatch(password, REGEX_PASSWORD);
+        }
     }
 }

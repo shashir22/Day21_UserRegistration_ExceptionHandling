@@ -23,5 +23,10 @@ namespace TestProject1
         {
             throw new NotImplementedException();
         }
+
+        internal bool ValidatePassword(object p)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
