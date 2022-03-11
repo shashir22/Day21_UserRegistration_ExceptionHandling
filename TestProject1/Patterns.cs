@@ -13,5 +13,10 @@ namespace TestProject1
         {
             throw new NotImplementedException();
         }
+
+        internal bool ValidateEmailId(object p)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
