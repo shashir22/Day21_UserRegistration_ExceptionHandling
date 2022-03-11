@@ -18,5 +18,10 @@ namespace TestProject1
         {
             throw new NotImplementedException();
         }
+
+        internal bool ValidateMobileNumber(object p)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
